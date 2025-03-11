@@ -8,9 +8,15 @@ int main()
     scanf("%lf %lf %lf", c_ptr, d_ptr, e_ptr);
     printf("a = %lf, b = %lf, c = %lf\n", *c_ptr, *d_ptr, *e_ptr);
 
-    e_ptr = c_ptr;
-    c_ptr = d_ptr;
-    d_ptr = e_ptr;
-
+    *e_ptr = *c_ptr;
+    *c_ptr = *d_ptr;
+    *d_ptr = *e_ptr;
+  
+    
     printf("a = %lf, b = %lf, c = %lf\n", *c_ptr, *d_ptr, *e_ptr);
+    
+    free(c_ptr);
+    free(d_ptr);
+    free(e_ptr);
+    return 0;
 }

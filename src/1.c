@@ -9,4 +9,5 @@ int main()
     *a_ptr *= 2;
     *b_ptr /= 2;
     printf("a = %d, b = %d\n", a, b);
+    return 0;
 }
